@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/index', [App\Http\Controllers\TwentyOneHomeController::class, 'index'])->name('index');
